@@ -1,5 +1,5 @@
 module.exports = function repeater(str, options) {
-  let separatorString = '';
+  let separatorString = options.additionRepeatTimes ? '' : options.addition ? options.addition : '';
   let newString = '';
   const separator = options.separator ? options.separator : '+';
 
@@ -14,4 +14,3 @@ module.exports = function repeater(str, options) {
 
   return newString ? newString : `${str}${options.addition}`;
 };
-  
